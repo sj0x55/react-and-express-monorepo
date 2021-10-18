@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StyledLink component should match a snapshot 1`] = `
+.c0 {
+  position: relative;
+  cursor: pointer;
+  font-weight: bold;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: inherit;
+  margin: 0 10px;
+  padding: 5px 10px;
+}
+
+.c0:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c0.active::after {
+  opacity: 1;
+}
+
+.c0::after {
+  -webkit-transition: opacity 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  background-color: #C0C7D6;
+  position: absolute;
+  content: '';
+  opacity: 0;
+  width: 10px;
+  height: 20px;
+  top: 50%;
+  left: -5px;
+}
+
+<span
+  class="c0"
+  to="..."
+/>
+`;

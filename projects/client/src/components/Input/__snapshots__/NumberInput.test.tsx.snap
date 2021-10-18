@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NumberInput component should match a snapshot 1`] = `
+.c0 {
+  background-color: #FFFFFF;
+  border: 1px solid #111111;
+  color: #111111;
+  padding: 5px;
+}
+
+<input
+  className="c0"
+  type="number"
+/>
+`;

@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match a snapshot 1`] = `
+.c0 {
+  background: #66748f;
+  color: #FFFFFF;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  padding: 5px 0;
+  margin: 10px 0;
+}
+
+<nav
+  className="c0"
+>
+  <p
+    0={
+      Object {
+        "children": "Disks",
+        "data-test": "disks",
+        "to": "/disks",
+      }
+    }
+    1={Object {}}
+  >
+    StyledLink
+  </p>
+  <p
+    0={
+      Object {
+        "children": "Smartphones",
+        "data-test": "smartphones",
+        "to": "/smartphones",
+      }
+    }
+    1={Object {}}
+  >
+    StyledLink
+  </p>
+  <p
+    0={
+      Object {
+        "children": "Other",
+        "data-test": "other",
+        "to": "/other",
+      }
+    }
+    1={Object {}}
+  >
+    StyledLink
+  </p>
+</nav>
+`;

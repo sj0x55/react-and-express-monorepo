@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Timer component should match a snapshot 1`] = `
+<span
+  className=""
+>
+  300
+</span>
+`;

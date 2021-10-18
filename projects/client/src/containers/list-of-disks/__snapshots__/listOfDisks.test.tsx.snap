@@ -1,0 +1,633 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListOfDisks component should render list with few items 1`] = `
+.c0 {
+  display: grid;
+}
+
+.c3 {
+  text-align: center;
+}
+
+.c6 {
+  text-align: right;
+}
+
+.c1 {
+  border: 1px solid #66748f;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 10px 10px;
+  border-top: 1px solid #C0C7D6;
+}
+
+.c4:nth-child(16n + 1) {
+  background: #e5e8ee;
+}
+
+.c4:nth-child(16n + 2) {
+  background: #e5e8ee;
+}
+
+.c4:nth-child(16n + 3) {
+  background: #e5e8ee;
+}
+
+.c4:nth-child(16n + 4) {
+  background: #e5e8ee;
+}
+
+.c4:nth-child(16n + 5) {
+  background: #e5e8ee;
+}
+
+.c4:nth-child(16n + 6) {
+  background: #e5e8ee;
+}
+
+.c4:nth-child(16n + 7) {
+  background: #e5e8ee;
+}
+
+.c4:nth-child(16n + 8) {
+  background: #e5e8ee;
+}
+
+.c4:nth-child(-n + 8) {
+  background: #66748f;
+  color: #FFFFFF;
+  border-top: none;
+  border-bottom: none;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 10px 10px;
+  border-top: 1px solid #C0C7D6;
+}
+
+.c5:nth-child(16n + 1) {
+  background: #e5e8ee;
+}
+
+.c5:nth-child(16n + 2) {
+  background: #e5e8ee;
+}
+
+.c5:nth-child(16n + 3) {
+  background: #e5e8ee;
+}
+
+.c5:nth-child(16n + 4) {
+  background: #e5e8ee;
+}
+
+.c5:nth-child(16n + 5) {
+  background: #e5e8ee;
+}
+
+.c5:nth-child(16n + 6) {
+  background: #e5e8ee;
+}
+
+.c5:nth-child(16n + 7) {
+  background: #e5e8ee;
+}
+
+.c5:nth-child(16n + 8) {
+  background: #e5e8ee;
+}
+
+.c5:nth-child(-n + 8) {
+  background: #66748f;
+  color: #FFFFFF;
+  border-top: none;
+  border-bottom: none;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+  -webkit-justify-content: right;
+  -ms-flex-pack: right;
+  justify-content: right;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 10px 10px;
+  border-top: 1px solid #C0C7D6;
+}
+
+.c7:nth-child(16n + 1) {
+  background: #e5e8ee;
+}
+
+.c7:nth-child(16n + 2) {
+  background: #e5e8ee;
+}
+
+.c7:nth-child(16n + 3) {
+  background: #e5e8ee;
+}
+
+.c7:nth-child(16n + 4) {
+  background: #e5e8ee;
+}
+
+.c7:nth-child(16n + 5) {
+  background: #e5e8ee;
+}
+
+.c7:nth-child(16n + 6) {
+  background: #e5e8ee;
+}
+
+.c7:nth-child(16n + 7) {
+  background: #e5e8ee;
+}
+
+.c7:nth-child(16n + 8) {
+  background: #e5e8ee;
+}
+
+.c7:nth-child(-n + 8) {
+  background: #66748f;
+  color: #FFFFFF;
+  border-top: none;
+  border-bottom: none;
+}
+
+.c10 {
+  font-size: 12px;
+}
+
+.c9 {
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #66748f;
+}
+
+.c9:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c8 {
+  border: 2px solid #C0C7D6;
+}
+
+.c2 {
+  grid-template-columns: 40px 120px 200px 200px 150px 150px 1fr 120px;
+}
+
+<div
+  class="c0 c1 c2"
+  data-test="dynamicData"
+  sizes="40px,120px,200px,200px,150px,150px,1fr,120px"
+>
+  <div
+    class="c3 c4"
+  >
+    -
+  </div>
+  <div
+    class="c3 c4"
+  >
+    Image
+  </div>
+  <div
+    class="c3 c4"
+  >
+    Price per TB
+  </div>
+  <div
+    class="c3 c4"
+  >
+    Price
+  </div>
+  <div
+    class="c3 c4"
+  >
+    Capacity
+  </div>
+  <div
+    class="c3 c4"
+  >
+    Condition
+  </div>
+  <div
+    class="c5"
+  >
+    Name
+  </div>
+  <div
+    class="c6 c7"
+  >
+    Last update
+  </div>
+  <div
+    class="c3 c4"
+    data-condition="used"
+    data-test="cell0-1"
+  >
+    <span
+      class=" "
+    >
+      -
+    </span>
+  </div>
+  <div
+    class="c3 c4"
+    data-condition="used"
+    data-test="cell0-2"
+  >
+    <img
+      class="c8"
+      height="60"
+      src="https://image1"
+      width="60"
+    />
+  </div>
+  <div
+    class="c3 c4"
+    data-condition="used"
+    data-test="cell0-3"
+  >
+    <span
+      class=" "
+    >
+      £ 22.12
+    </span>
+  </div>
+  <div
+    class="c3 c4"
+    data-condition="used"
+    data-test="cell0-4"
+  >
+    <span
+      class=" "
+    >
+      £ 110.59
+    </span>
+  </div>
+  <div
+    class="c3 c4"
+    data-condition="used"
+    data-test="cell0-5"
+  >
+    <span
+      class=" "
+    >
+      5 TB
+    </span>
+  </div>
+  <div
+    class="c3 c4"
+    data-condition="used"
+    data-test="cell0-6"
+  >
+    <span
+      class=" "
+    >
+      used
+    </span>
+  </div>
+  <div
+    class="c5"
+    data-condition="used"
+    data-test="cell0-7"
+  >
+    <a
+      class="c9"
+      href="https://url1"
+      target="_blank"
+    >
+      WD 5 TB My Passport
+    </a>
+  </div>
+  <div
+    class="c6 c7"
+    data-condition="used"
+    data-test="cell0-8"
+  >
+    <span
+      class=" c10"
+    >
+      <span
+        class=""
+      >
+        over 21 years
+      </span>
+    </span>
+  </div>
+  <div
+    class="c3 c4"
+    data-condition="used"
+    data-test="cell1-1"
+  >
+    <span
+      class=" "
+    >
+      -
+    </span>
+  </div>
+  <div
+    class="c3 c4"
+    data-condition="used"
+    data-test="cell1-2"
+  >
+    <img
+      class="c8"
+      height="60"
+      src="https://image2"
+      width="60"
+    />
+  </div>
+  <div
+    class="c3 c4"
+    data-condition="used"
+    data-test="cell1-3"
+  >
+    <span
+      class=" "
+    >
+      £ 22.62
+    </span>
+  </div>
+  <div
+    class="c3 c4"
+    data-condition="used"
+    data-test="cell1-4"
+  >
+    <span
+      class=" "
+    >
+      £ 180.9911
+    </span>
+  </div>
+  <div
+    class="c3 c4"
+    data-condition="used"
+    data-test="cell1-5"
+  >
+    <span
+      class=" "
+    >
+      8 TB
+    </span>
+  </div>
+  <div
+    class="c3 c4"
+    data-condition="used"
+    data-test="cell1-6"
+  >
+    <span
+      class=" "
+    >
+      used
+    </span>
+  </div>
+  <div
+    class="c5"
+    data-condition="used"
+    data-test="cell1-7"
+  >
+    <a
+      class="c9"
+      href="https://url2"
+      target="_blank"
+    >
+      Seagate 8 TB
+    </a>
+  </div>
+  <div
+    class="c6 c7"
+    data-condition="used"
+    data-test="cell1-8"
+  >
+    <span
+      class=" c10"
+    >
+      <span
+        class=""
+      >
+        over 21 years
+      </span>
+    </span>
+  </div>
+  <div
+    class="c3 c4"
+    data-condition="used"
+    data-test="cell2-1"
+  >
+    <span
+      class=" "
+    >
+      -
+    </span>
+  </div>
+  <div
+    class="c3 c4"
+    data-condition="used"
+    data-test="cell2-2"
+  >
+    <span
+      class=" c10"
+    >
+      [no image]
+    </span>
+  </div>
+  <div
+    class="c3 c4"
+    data-condition="used"
+    data-test="cell2-3"
+  >
+    <span
+      class=" "
+    >
+      £ 22.62
+    </span>
+  </div>
+  <div
+    class="c3 c4"
+    data-condition="used"
+    data-test="cell2-4"
+  >
+    <span
+      class=" "
+    >
+      £ 180.99
+    </span>
+  </div>
+  <div
+    class="c3 c4"
+    data-condition="used"
+    data-test="cell2-5"
+  >
+    <span
+      class=" "
+    >
+      8 TB
+    </span>
+  </div>
+  <div
+    class="c3 c4"
+    data-condition="used"
+    data-test="cell2-6"
+  >
+    <span
+      class=" "
+    >
+      used
+    </span>
+  </div>
+  <div
+    class="c5"
+    data-condition="used"
+    data-test="cell2-7"
+  >
+    <a
+      class="c9"
+      href="https://url2"
+      target="_blank"
+    >
+      Seagate 8 TB (no image, no date)
+    </a>
+  </div>
+  <div
+    class="c6 c7"
+    data-condition="used"
+    data-test="cell2-8"
+  >
+    <span
+      class=" c10"
+    >
+      <span
+        class=""
+      >
+        about 30 years
+      </span>
+    </span>
+  </div>
+  <div
+    class="c3 c4"
+    data-condition="new"
+    data-test="cell3-1"
+  >
+    <span
+      class=" "
+    >
+      -
+    </span>
+  </div>
+  <div
+    class="c3 c4"
+    data-condition="new"
+    data-test="cell3-2"
+  >
+    <img
+      class="c8"
+      height="60"
+      src="https://image1"
+      width="60"
+    />
+  </div>
+  <div
+    class="c3 c4"
+    data-condition="new"
+    data-test="cell3-3"
+  >
+    <span
+      class=" "
+    >
+      £ 24.12
+    </span>
+  </div>
+  <div
+    class="c3 c4"
+    data-condition="new"
+    data-test="cell3-4"
+  >
+    <span
+      class=" "
+    >
+      £ 120.59
+    </span>
+  </div>
+  <div
+    class="c3 c4"
+    data-condition="new"
+    data-test="cell3-5"
+  >
+    <span
+      class=" "
+    >
+      5 TB
+    </span>
+  </div>
+  <div
+    class="c3 c4"
+    data-condition="new"
+    data-test="cell3-6"
+  >
+    <span
+      class=" "
+    >
+      new
+    </span>
+  </div>
+  <div
+    class="c5"
+    data-condition="new"
+    data-test="cell3-7"
+  >
+    <a
+      class="c9"
+      href="https://url1"
+      target="_blank"
+    >
+      WD 5 TB My Passport
+    </a>
+  </div>
+  <div
+    class="c6 c7"
+    data-condition="new"
+    data-test="cell3-8"
+  >
+    <span
+      class=" c10"
+    >
+      <span
+        class=""
+      >
+        over 21 years
+      </span>
+    </span>
+  </div>
+</div>
+`;

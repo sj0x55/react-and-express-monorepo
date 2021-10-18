@@ -1,0 +1,12 @@
+{
+  "files": [],
+  "references": [
+    { "path": "./packages/enums" },
+    { "path": "./packages/logger" },
+    { "path": "./packages/mailer" },
+    { "path": "./packages/money" },
+    { "path": "./packages/product-data-io" },
+    { "path": "./packages/product-data-parser" },
+    { "path": "./packages/utils" }
+ ]
+}

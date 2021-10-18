@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Text component should match a snapshot 1`] = `
+<span
+  className=" "
+>
+  Hello World!
+</span>
+`;
+
+exports[`Text component should match a snapshot with bold, block and size props 1`] = `
+.c0 {
+  font-weight: bold;
+  font-size: 34px;
+}
+
+<div
+  className=" c0"
+  size="xxl"
+>
+  Hello World!
+</div>
+`;

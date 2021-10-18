@@ -1,0 +1,16 @@
+{
+  "watch": ["./src", "../../packages/*/build"],
+  "ignore": ["**/*.d.ts", "**/*.test.ts"],
+  "ext": "js,jsx,ts,tsx,json",
+  "__exec": "npm run build && node build/index.js",
+  "exec": "ts-node --project tsconfig.json --files src/index.ts",
+  "events": {
+    "restart": "kill-port 9229"
+  },
+  "env": {
+    "NODE_ENV": "development"
+  },
+  "signal": "SIGINT",
+  "verbose": true,
+  "delay": "1500"
+}

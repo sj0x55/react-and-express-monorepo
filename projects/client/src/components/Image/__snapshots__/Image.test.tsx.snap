@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Image component should match a snapshot 1`] = `
+.c0 {
+  border: 2px solid #C0C7D6;
+}
+
+<img
+  alt="React image"
+  className="c0"
+  src="react-logo.png"
+/>
+`;

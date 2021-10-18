@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button component should match a snapshot 1`] = `
+.c0 {
+  background: #66748f;
+  border: 1px solid #111111;
+  color: #FFFFFF;
+  font-size: 24px;
+  padding: 5px 20px;
+}
+
+.c0:hover:not(:disabled) {
+  cursor: pointer;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c0:disabled {
+  opacity: 0.3;
+}
+
+<button
+  className="c0"
+>
+  Click me!
+</button>
+`;
+
+exports[`Button component should match a snapshot with stretch prop 1`] = `
+.c0 {
+  background: #66748f;
+  border: 1px solid #111111;
+  color: #FFFFFF;
+  font-size: 24px;
+  padding: 5px 20px;
+  width: 100%;
+}
+
+.c0:hover:not(:disabled) {
+  cursor: pointer;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c0:disabled {
+  opacity: 0.3;
+}
+
+<button
+  className="c0"
+>
+  Click me!
+</button>
+`;
