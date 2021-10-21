@@ -1,13 +1,8 @@
 {
   "extends": "../tsconfig.shared.json",
   "compilerOptions": {
-    "module": "esnext",
     "baseUrl": "./src",
-    "typeRoots": [
-      "./types"
-    ]
+    "typeRoots": ["./types"]
   },
-  "include": [
-    "./src"
-  ]
+  "include": ["./src"]
 }

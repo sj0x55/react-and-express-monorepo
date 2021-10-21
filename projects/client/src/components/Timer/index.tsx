@@ -18,7 +18,7 @@ export const Timer = ({ duration, cb, repeat }: TTimerProps) => {
   }, [duration]);
 
   useEffect(() => {
-    if (timeLeft < 0) {
+    if (timeLeft <= 0) {
       if (repeat) {
         setTimeLeft(duration);
       }

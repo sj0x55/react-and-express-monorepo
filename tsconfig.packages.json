@@ -7,6 +7,7 @@
     { "path": "./packages/money" },
     { "path": "./packages/product-data-io" },
     { "path": "./packages/product-data-parser" },
-    { "path": "./packages/utils" }
- ]
+    { "path": "./packages/utils" },
+    { "path": "./packages/webpack-tool" }
+  ]
 }

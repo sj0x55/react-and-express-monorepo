@@ -3,8 +3,8 @@ import { FC, ReactElement, ReactNode } from 'react';
 import { Provider } from 'react-redux';
 import { ThemeProvider } from 'styled-components';
 import { render } from '@testing-library/react';
-import testRenderer, { TestRendererOptions } from 'react-test-renderer';
 import { configureStore, EnhancedStore } from '@reduxjs/toolkit';
+import testRenderer, { TestRendererOptions } from 'react-test-renderer';
 import { mainTheme } from 'styles/theme';
 import appSliceReducer from 'app/slice';
 

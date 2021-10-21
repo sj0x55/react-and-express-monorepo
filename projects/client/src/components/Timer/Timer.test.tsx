@@ -11,7 +11,7 @@ describe('Timer component', () => {
     jest.clearAllTimers();
   });
 
-  it('should left x time and call callbacxk', () => {
+  it('should left x time and call callback', () => {
     const cb = jest.fn();
 
     act(() => {
@@ -19,7 +19,7 @@ describe('Timer component', () => {
       jest.advanceTimersByTime(6000);
     });
 
-    expect(screen.getByText('-1')).toBeInTheDocument();
+    expect(screen.getByText('0')).toBeInTheDocument();
     expect(cb).toHaveBeenCalledTimes(1);
   });
 

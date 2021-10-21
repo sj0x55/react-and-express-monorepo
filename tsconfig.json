@@ -1,0 +1,20 @@
+{
+  "files": [],
+  "compilerOptions": {
+    "noEmit": false,
+    "composite": true
+  },
+  "references": [
+    { "path": "./projects/client" },
+    { "path": "./projects/server" },
+    { "path": "./packages/enums" },
+    { "path": "./packages/enums" },
+    { "path": "./packages/logger" },
+    { "path": "./packages/mailer" },
+    { "path": "./packages/money" },
+    { "path": "./packages/product-data-io" },
+    { "path": "./packages/product-data-parser" },
+    { "path": "./packages/utils" },
+    { "path": "./packages/webpack" }
+  ]
+}

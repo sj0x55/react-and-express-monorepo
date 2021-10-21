@@ -3,11 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "workspaces": [
-    "packages/*",
+    "packages/configs/*",
+    "packages/libs/*",
+    "packages/tools/*",
+    "packages/ui-components/*",
     "projects/*"
   ],
   "scripts": {
+    "__type-check": "tsc -w --project tsconfig.json",
     "packages:build": "tsc --build --force ./tsconfig.packages.json",
+    "build": "webpack-tool",
+    "test": "jest-tool",
     "client:start": "npm run packages:build && npm start -w @react-and-express/client",
     "server:start": "npm run packages:build && npm start -w @react-and-express/server",
     "client:type-check": "npm run type-check -w @react-and-express/client",
@@ -18,9 +24,58 @@
     "lodash": "^4.17.21"
   },
   "devDependencies": {
+    "@babel/cli": "^7.15.7",
+    "@babel/core": "^7.15.8",
+    "@babel/plugin-proposal-class-properties": "^7.14.5",
+    "@babel/plugin-transform-runtime": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
+    "@babel/preset-react": "^7.14.5",
+    "@babel/preset-typescript": "^7.15.0",
+    "@babel/runtime": "^7.15.4",
+    "@react-and-express/jest-tools": "file:packages/tools/jest",
+    "@react-and-express/monorepo-tools": "file:packages/tools/monorepo",
+    "@react-and-express/webpack-tools": "file:packages/tools/webpack",
     "@types/date-fns": "^2.6.0",
     "@types/lodash": "^4.14.175",
+    "@types/webpack": "^5.28.0",
+    "@types/webpack-dev-server": "^4.3.1",
+    "@types/webpack-hot-middleware": "^2.25.5",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
+    "babel-jest": "^27.3.1",
+    "babel-loader": "^8.2.2",
+    "camelcase": "^6.2.0",
+    "css-loader": "^6.4.0",
+    "dotenv": "^10.0.0",
+    "dotenv-expand": "^5.1.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.26.1",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.4.0",
+    "jest": "^27.3.1",
     "jest-date-mock": "^1.0.8",
-    "typescript": "^4.4.4"
+    "postcss-flexbugs-fixes": "^5.0.2",
+    "postcss-loader": "^6.2.0",
+    "postcss-preset-env": "^6.7.0",
+    "prettier": "^2.4.1",
+    "source-map-loader": "^3.0.0",
+    "style-loader": "^3.3.0",
+    "typescript": "^4.4.4",
+    "webpack": "^5.58.2",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.3.1",
+    "webpack-hot-middleware": "^2.25.1",
+    "webpack-merge": "^5.8.0"
+  },
+  "browserslist": {
+    "production": [">0.2%", "not dead", "not op_mini all"],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

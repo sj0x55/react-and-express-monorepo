@@ -1,0 +1,10 @@
+{
+  "name": "@react-and-express/webpack-tools",
+  "version": "0.1.0",
+  "private": true,
+  "main": "src/index.ts",
+  "bin": "./bin/webpack-cli.js",
+  "scripts": {
+    "build": "ts-node src/index.ts"
+  }
+}

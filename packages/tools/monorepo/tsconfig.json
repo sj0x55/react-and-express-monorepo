@@ -1,0 +1,11 @@
+{
+  "extends": "../../tsconfig.shared.json",
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "rootDir": "./src",
+    "outDir": "./build",
+    "tsBuildInfoFile": "./build/.tsbuildinfo"
+  },
+  "include": ["./src"],
+  "typeRoots": ["./types"]
+}

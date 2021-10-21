@@ -5,7 +5,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { store } from 'app/store';
 import { Root } from 'containers/root';
 
-import 'styles/fonts.css';
+// import 'styles/fonts.css';
 
 render(
   <StrictMode>
