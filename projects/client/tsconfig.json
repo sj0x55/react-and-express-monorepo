@@ -1,8 +1,10 @@
 {
   "extends": "../tsconfig.shared.json",
   "compilerOptions": {
-    "baseUrl": "./src",
-    "typeRoots": ["./types"]
-  },
-  "include": ["./src"]
+    "baseUrl": "src",
+    "outDir": ".",
+    "paths": {
+      "*": ["*"]
+    }
+  }
 }

@@ -1,24 +1,28 @@
-import { resolvePath, getAppPaths } from '@react-and-express/monorepo-utils';
+import { getStandardPackagePaths, getExistingPath } from '@react-and-express/monorepo-tools';
 import * as jest from 'jest';
 
 process.env.BABEL_ENV = 'test';
 process.env.NODE_ENV = 'test';
-process.env.PUBLIC_URL = '';
 
-const paths = getAppPaths({
-  appDir: process.cwd(),
-});
-const getLocalPath = (localPath: string) => resolvePath(__dirname, localPath);
+const standardPackagePaths = getStandardPackagePaths(process.cwd());
+const getRelativePath = getExistingPath(process.cwd());
+const getLocalPath = getExistingPath(__dirname);
+const customJestConfig = getRelativePath('jest.config.js');
 
-export default () => {
+export default async () => {
+  const { default: defaultFileConfig, ...fileConfig } = customJestConfig
+    ? await import(customJestConfig)
+    : { default: {} };
+
   const config = {
     projects: [
       {
+        clearMocks: true,
+        resetModules: true,
         roots: ['<rootDir>/src'],
         testEnvironment: 'jsdom',
         testRunner: 'jest-circus/runner',
-        resetMocks: true,
-        modulePaths: [paths.srcPath],
+        modulePaths: [standardPackagePaths.srcPath],
         setupFiles: [getLocalPath('setup-tests.ts')],
         setupFilesAfterEnv: [getLocalPath('setup-tests-after.ts')],
         watchPlugins: ['jest-watch-typeahead/filename', 'jest-watch-typeahead/testname'],
@@ -27,14 +31,15 @@ export default () => {
           '^.+\\.css$': getLocalPath('config/transform/css.ts'),
         },
         moduleNameMapper: {
-          '^src/(.*)$': '<rootDir>/src/$1',
+          '^@/(.*)$': '<rootDir>/src/$1',
         },
+        ...(defaultFileConfig || fileConfig || {}),
       },
     ],
   };
 
   jest
-    .runCLI({ config: JSON.stringify(config) }, [process.cwd()])
+    .runCLI({ config: JSON.stringify(config), _: [], $0: '' }, [process.cwd()])
     .then(() => console.log('run-programmatically-mutiple-projects completed'))
     .catch((err) => {
       console.error(err);

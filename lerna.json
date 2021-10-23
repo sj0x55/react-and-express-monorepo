@@ -1,0 +1,12 @@
+{
+  "packages": [
+    "packages/configs/*",
+    "packages/libs/*",
+    "packages/tools/*",
+    "packages/ui-components/*",
+    "projects/*"
+  ],
+  "version": "independent",
+  "useWorkspaces": true,
+  "npmClient": "npm"
+}

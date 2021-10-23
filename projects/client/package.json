@@ -29,7 +29,8 @@
     "start": "ts-node -T scripts/start.ts",
     "build": "ts-node -T scripts/build.ts",
     "__test": "node scripts/test.js",
-    "test": "ts-node -T scripts/test.ts"
+    "test": "ts-node -T scripts/test.ts",
+    "tsc-config": "tsc --showConfig"
   },
   "browserslist": {
     "production": [

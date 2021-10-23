@@ -1,25 +1,23 @@
 import { readFileSync, mkdirSync, writeFileSync } from 'fs';
 import { join } from 'path';
-import axios from "axios";
+import axios from 'axios';
 import { ProductType } from '@react-and-express/enums';
 import { TProduct } from '@react-and-express/types';
 import userAgents from './user-agents';
 
-export const getFileName = (type: ProductType) => `${type}-data.json`
+export const getFileName = (type: ProductType) => `${type}-data.json`;
 
 export const createDir = (dir: string) => {
   try {
     mkdirSync(dir);
   } catch (err) {
-    console.error(`${err}`);
+      console.error(`${err}`);
   }
-}
+};
 
 export const readDataFromFile = (dir: string, type: ProductType): TProduct[] | null => {
   try {
-    return JSON.parse(readFileSync(
-      join(dir, getFileName(type))
-    ).toString());
+    return JSON.parse(readFileSync(join(dir, getFileName(type))).toString());
   } catch (err) {
     console.error(`${err}`);
     return null;
@@ -30,10 +28,7 @@ export const writeDataToFile = (dir: string, type: ProductType, data: TProduct[]
   createDir(dir);
 
   try {
-    writeFileSync(
-      join(dir, getFileName(type)),
-      JSON.stringify(data)
-    );
+    writeFileSync(join(dir, getFileName(type)), JSON.stringify(data));
   } catch (err) {
     console.error(`${err}`);
   }
@@ -59,10 +54,13 @@ export async function fetchContent(url: string) {
   }
 }
 
+function a(b: string){
+
+}
+
 export const fetchContents = async (urls: string[]) => {
   return (await Promise.all(urls.map((url) => fetchContent(url)))).flat();
 };
-
 
 // export async function fetchContentFromWishList(url: string, featureMap: TFeaturesMap) {
 //   const allData = [];

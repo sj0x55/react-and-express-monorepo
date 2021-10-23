@@ -17,7 +17,7 @@ export const priceToNumber = (price: string | number): number => {
 
     return parseFloat(price || '0');
   } else {
-    return price
+    return price;
   }
 };
 

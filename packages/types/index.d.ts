@@ -1,4 +1,4 @@
-import { ProductType } from "@react-and-express/enums";
+import { ProductType } from '@react-and-express/enums';
 
 export type TObject = Record<string, unknown>;
 

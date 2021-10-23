@@ -2,7 +2,7 @@ module.exports = {
   root: true,
   ignorePatterns: ['.history', 'dist', 'build', 'node_modules'],
   parser: '@typescript-eslint/parser',
-  plugins: ['react', 'react-hooks', '@typescript-eslint', 'prettier'],
+  plugins: ['react', 'react-hooks', 'jest', '@typescript-eslint', 'prettier'],
   extends: [
     'eslint:recommended',
     'plugin:react/recommended',
@@ -42,14 +42,14 @@ module.exports = {
     'no-console': 'off',
     'no-debugger': 'off',
   },
-  // settings: {
-  //   'import/resolver': {
-  //     node: {
-  //       moduleDirectory: ['node_modules', 'src'],
-  //     },
-  //   },
-  //   react: {
-  //     version: 'detect',
-  //   },
-  // },
+  settings: {
+    // 'import/resolver': {
+    //   node: {
+    //     moduleDirectory: ['node_modules'],
+    //   },
+    // },
+    react: {
+      version: 'detect',
+    },
+  },
 };

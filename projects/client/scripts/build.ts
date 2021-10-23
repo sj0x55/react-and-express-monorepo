@@ -1,4 +1,4 @@
-import { build } from '@react-and-express/webpack-tool';
+import { build } from '@react-and-express/webpack-tools';
 
 process.env.BABEL_ENV = 'production';
 process.env.NODE_ENV = 'production';

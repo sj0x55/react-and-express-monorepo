@@ -1,41 +1,30 @@
+import path from 'path';
 import express from 'express';
 import webpack from 'webpack';
+import { merge } from 'webpack-merge';
 import webpackDevMiddleware from 'webpack-dev-middleware';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import webpackHotMiddleware from 'webpack-hot-middleware';
-import { merge } from 'webpack-merge';
-import dotenv from 'dotenv';
-import dotenvExpand from 'dotenv-expand';
+import dotenv from '@react-and-express/dotenv';
 import babelConfig from '@react-and-express/babel-config';
-import { resolvePath, validatePaths } from './utils';
+import { getStandardPackagePaths, getStandardPackageFiles, getExistingPath } from '@react-and-express/monorepo-tools';
 
-const resolveAppPath = (values: string[], checkIfExists = true) => resolvePath(process.cwd(), values, checkIfExists);
-const indexFileName = 'index.html';
-const paths: TPaths = {
-  publicPath: '/public',
-  srcPath: resolveAppPath(['src']),
-  outputPath: resolveAppPath(['build']),
-  outputIndexFile: resolveAppPath([`build/${indexFileName}`]),
-  dotenvFilePath: resolveAppPath(['.env']),
-  indexFilePath: resolveAppPath(['src/index.ts', 'src/index.tsx', 'src/index.js']),
-  templateFilePath: resolveAppPath([`public/${indexFileName}`]),
-  staticPath: resolveAppPath(['static'], false),
-};
+const standardPackagePaths = getStandardPackagePaths(process.cwd());
+const standardPackageFiles = getStandardPackageFiles(process.cwd());
+const paths = { ...standardPackagePaths, ...standardPackageFiles };
+const indexHtmlFileName = 'index.html';
+const relativePublicPath = '/public';
+const templateFilePath = path.join(paths.publicPath || '', indexHtmlFileName);
+const indexFilePath = path.join(paths.outputPath || '', indexHtmlFileName);
+
 const getCompiler = (customConfig: webpack.Configuration = {}) => {
-  const nodeEnv = (process.env.NODE_ENV || 'development') as 'development' | 'production';
-  const notValidKeys = validatePaths(paths);
-
-  if (notValidKeys.length > 0) {
-    throw Error(`Paths "${notValidKeys.join(', ')}" has not been found.`);
-  }
-
   if (paths.dotenvFilePath) {
-    dotenvExpand(dotenv.config({ path: paths.dotenvFilePath }));
+    dotenv(paths.dotenvFilePath);
   }
 
   const webpackConfig = merge(
     {
-      mode: nodeEnv,
+      mode: (process.env.NODE_ENV || 'development') as 'development' | 'production',
       target: 'web',
       devtool: 'inline-source-map',
       // devtool: 'cheap-module-eval-source-map',
@@ -43,12 +32,9 @@ const getCompiler = (customConfig: webpack.Configuration = {}) => {
       resolve: {
         extensions: ['.ts', '.tsx', '.js'],
         modules: ['node_modules', paths.srcPath || ''],
-        alias: {
-          src: paths.srcPath || '',
-        },
       },
       output: {
-        publicPath: '/public',
+        publicPath: relativePublicPath,
         path: paths.outputPath || '',
         filename: '[name].bundle.js',
         chunkFilename: '[name].chunk.js',
@@ -71,23 +57,13 @@ const getCompiler = (customConfig: webpack.Configuration = {}) => {
             loader: 'file-loader',
             exclude: [/\.(js|mjs|jsx|ts|tsx)$/, /\.html$/, /\.json$/],
             options: {
-              name: `${paths.publicPath}/media/[name].[hash:8].[ext]`,
+              name: `${relativePublicPath}/media/[name].[hash:8].[ext]`,
             },
           },
-          // {
-          //   test: /\.css$/,
-          //   use: ['css-loader', 'css-loader'],
-          //   options: {
-          //     importLoaders: 1,
-          //     sourceMap: true,
-          //   },
-          //   sideEffects: true,
-          // },
-          // TODO: CSS/SASS/Styled-Components
         ],
       },
       devServer: {
-        static: paths.publicPath || '',
+        static: relativePublicPath,
         historyApiFallback: true,
         compress: true,
         port: 1234,
@@ -97,9 +73,9 @@ const getCompiler = (customConfig: webpack.Configuration = {}) => {
       plugins: [
         new webpack.HotModuleReplacementPlugin(),
         new HtmlWebpackPlugin({
-          publicPath: paths.publicPath || '',
           inject: true,
-          template: paths.templateFilePath || '',
+          publicPath: relativePublicPath,
+          template: templateFilePath,
         }),
       ],
       optimization: {
@@ -155,8 +131,8 @@ export const devServer = (customConfig: webpack.Configuration = {}) => {
 
   app.use(
     webpackDevMiddleware(compiler, {
-      writeToDisk: (filePath) => new RegExp(`${indexFileName}$`).test(filePath),
-      publicPath: paths.publicPath || '',
+      writeToDisk: (filePath) => new RegExp(`${indexHtmlFileName}$`).test(filePath),
+      publicPath: relativePublicPath,
       stats: { colors: true },
       headers: {
         'Access-Control-Allow-Origin': '*',
@@ -172,7 +148,7 @@ export const devServer = (customConfig: webpack.Configuration = {}) => {
   app.use(express.static(paths.staticPath || ''));
 
   app.get('*', (req, res) => {
-    res.sendFile(paths.outputIndexFile || '');
+    res.sendFile(indexFilePath);
   });
 
   app.listen(3000, function () {

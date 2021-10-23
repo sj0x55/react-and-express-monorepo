@@ -3,6 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "main": "src/index.ts",
+  "types": "types/index.d.ts",
+  "scripts": {
+    "build": "tsc --build --force",
+    "tsc-config": "tsc --showConfig"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.15.4"
+  },
   "devDependencies": {
     "@babel/core": "^7.15.8",
     "@babel/plugin-proposal-class-properties": "^7.14.5",
