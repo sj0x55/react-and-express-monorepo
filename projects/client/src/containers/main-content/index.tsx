@@ -1,5 +1,5 @@
 import { useCallback, useEffect } from 'react';
-import { HttpMethod } from '@react-and-express/enums';
+import { HttpMethod } from '@package/enums';
 import { useSelector, useDispatch } from 'app/hooks';
 import { Loading } from 'components/Loading';
 import { ContentLayoutGrid } from 'components/layouts/content';

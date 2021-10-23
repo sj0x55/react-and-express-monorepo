@@ -1,12 +1,11 @@
 import { useCallback } from 'react';
-import { HttpMethod } from '@react-and-express/enums';
+import { HttpMethod } from '@package/enums';
 import { useSelector, useDispatch } from 'app/hooks';
 import { isLoading } from 'app/selectors';
 import { fetchDataAsync } from 'app/slice';
 import { Pane } from 'components/Pane';
 import { Button } from 'components/Button';
 import { TFetchNewDataProps } from './fetchNewData';
-
 
 export const FetchNewData = ({ type }: TFetchNewDataProps) => {
   const dispatch = useDispatch();

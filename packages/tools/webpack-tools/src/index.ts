@@ -5,9 +5,9 @@ import { merge } from 'webpack-merge';
 import webpackDevMiddleware from 'webpack-dev-middleware';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import webpackHotMiddleware from 'webpack-hot-middleware';
-import dotenv from '@react-and-express/dotenv';
-import babelConfig from '@react-and-express/babel-config';
-import { getStandardPackagePaths, getStandardPackageFiles, getExistingPath } from '@react-and-express/monorepo-tools';
+import dotenv from '@package/dotenv';
+import babelConfig from '@package/babel-config';
+import { getStandardPackagePaths, getStandardPackageFiles, getExistingPath } from '@package/monorepo-tools';
 
 const standardPackagePaths = getStandardPackagePaths(process.cwd());
 const standardPackageFiles = getStandardPackageFiles(process.cwd());

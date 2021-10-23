@@ -1,4 +1,4 @@
-import { devServer } from '@react-and-express/webpack-tools';
+import { devServer } from '@package/webpack-tools';
 
 process.env.BABEL_ENV = 'development';
 process.env.NODE_ENV = 'development';

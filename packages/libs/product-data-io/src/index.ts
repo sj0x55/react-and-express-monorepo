@@ -1,8 +1,8 @@
 import { readFileSync, mkdirSync, writeFileSync } from 'fs';
 import { join } from 'path';
 import axios from 'axios';
-import { ProductType } from '@react-and-express/enums';
-import { TProduct } from '@react-and-express/types';
+import { ProductType } from '@package/enums';
+import { TProduct } from '@package/types';
 import userAgents from './user-agents';
 
 export const getFileName = (type: ProductType) => `${type}-data.json`;
@@ -11,7 +11,7 @@ export const createDir = (dir: string) => {
   try {
     mkdirSync(dir);
   } catch (err) {
-      console.error(`${err}`);
+    console.error(`${err}`);
   }
 };
 
@@ -54,9 +54,7 @@ export async function fetchContent(url: string) {
   }
 }
 
-function a(b: string){
-
-}
+function a(b: string) {}
 
 export const fetchContents = async (urls: string[]) => {
   return (await Promise.all(urls.map((url) => fetchContent(url)))).flat();

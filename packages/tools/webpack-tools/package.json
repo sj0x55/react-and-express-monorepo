@@ -1,5 +1,5 @@
 {
-  "name": "@react-and-express/webpack-tools",
+  "name": "@package/webpack-tools",
   "version": "0.1.0",
   "private": true,
   "main": "src/index.ts",

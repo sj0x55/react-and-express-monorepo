@@ -1,4 +1,4 @@
-import { ProductType } from "@react-and-express/enums";
+import { ProductType } from '@package/enums';
 
 export type TFetchNewDataProps = {
   type: ProductType;

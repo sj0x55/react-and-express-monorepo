@@ -1,4 +1,5 @@
-import { getStandardPackagePaths, getExistingPath } from '@react-and-express/monorepo-tools';
+import { getStandardPackagePaths, getExistingPath } from '@package/monorepo-tools';
+import setupTests from 'setup-tests';
 import * as jest from 'jest';
 
 process.env.BABEL_ENV = 'test';

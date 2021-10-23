@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux';
-import { ProductType } from '@react-and-express/enums';
+import { ProductType } from '@package/enums';
 import { selectProductFilters } from 'app/selectors';
 import { DynamicList } from 'containers/dynamic-list';
 import { sort } from 'modules/data';

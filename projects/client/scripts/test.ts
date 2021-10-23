@@ -1,4 +1,4 @@
-import runTests from '@react-and-express/jest-tools';
+import runTests from '@package/jest-tools';
 
 process.env.BABEL_ENV = 'test';
 process.env.NODE_ENV = 'test';

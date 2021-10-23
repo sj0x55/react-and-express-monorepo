@@ -1,5 +1,5 @@
 {
-  "name": "@react-and-express/monorepo-tools",
+  "name": "@package/monorepo-tools",
   "version": "0.1.0",
   "private": true,
   "main": "src/index.ts",

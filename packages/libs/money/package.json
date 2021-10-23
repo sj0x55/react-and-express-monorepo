@@ -1,5 +1,5 @@
 {
-  "name": "@react-and-express/money",
+  "name": "@package/money",
   "version": "0.1.0",
   "private": true,
   "main": "src/index.ts",

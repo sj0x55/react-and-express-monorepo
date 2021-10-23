@@ -2,36 +2,24 @@
   "name": "react-and-express-monorepo",
   "version": "0.1.0",
   "private": true,
-  "workspaces": [
-    "packages/configs/*",
-    "packages/libs/*",
-    "packages/tools/*",
-    "packages/ui-components/*",
-    "projects/*"
-  ],
   "scripts": {
     "__type-check": "tsc -w --project tsconfig.json",
     "__packages:build": "tsc --build --force ./tsconfig.packages.json",
-    "__client:start": "npm run packages:build && npm start -w @react-and-express/client",
-    "__server:start": "npm run packages:build && npm start -w @react-and-express/server",
-    "__client:type-check": "npm run type-check -w @react-and-express/client",
-    "__server:type-check": "npm run type-check -w @react-and-express/server",
+    "__client:start": "npm run packages:build && npm start -w @package/client",
+    "__server:start": "npm run packages:build && npm start -w @package/server",
+    "__client:type-check": "npm run type-check -w @package/client",
+    "__server:type-check": "npm run type-check -w @package/server",
     "tsc-check": "lerna run tsc-check",
     "tsc-config": "lerna run tsc-config",
     "build": "lerna run build",
     "test": "lerna run test",
-    "lint": "eslint --ext js,ts,tsx ."
-  },
-  "dependencies": {
-    "date-fns": "^2.25.0",
-    "lodash": "^4.17.21"
+    "lint": "eslint --ext js,ts,tsx .",
+    "lerna": "lerna",
+    "test-js": "ts-node test.ts"
   },
   "devDependencies": {
-    "@types/date-fns": "^2.6.0",
-    "@types/lodash": "^4.14.176",
     "@typescript-eslint/eslint-plugin": "^5.0.0",
     "@typescript-eslint/parser": "^5.0.0",
-    "camelcase": "^6.2.0",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-jest": "^25.2.2",
@@ -41,6 +29,7 @@
     "lerna": "^4.0.0",
     "prettier": "^2.4.1",
     "ts-node": "^10.3.1",
+    "tsconfig-paths": "^3.11.0",
     "typescript": "^4.4.4"
   },
   "browserslist": {

@@ -1,7 +1,7 @@
-import type { TProduct } from '@react-and-express/types';
-import { arrayToObject } from '@react-and-express/utils';
+import type { TProduct } from '@package/types';
+import { arrayToObject } from '@package/utils';
 
-export * from './DataParser'
+export * from './DataParser';
 
 export const mergeData = (oldPoductData: TProduct[], newProductData: TProduct[]) => {
   const oldPoductDataObj = arrayToObject<TProduct>(['condition', 'href'], oldPoductData);

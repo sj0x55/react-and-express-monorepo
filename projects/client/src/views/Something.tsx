@@ -1,4 +1,4 @@
-import { ProductType } from '@react-and-express/enums';
+import { ProductType } from '@package/enums';
 import { Filters } from 'containers/filters';
 import { MainContent } from 'containers/main-content';
 import { ListOfSomething } from 'containers/list-of-something';

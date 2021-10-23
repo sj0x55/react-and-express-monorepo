@@ -1,5 +1,5 @@
 {
-  "name": "@react-and-express/client",
+  "name": "@project/client",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -26,7 +26,7 @@
   },
   "scripts": {
     "__start": "node scripts/start.js",
-    "start": "ts-node -T scripts/start.ts",
+    "client:start": "ts-node -T scripts/start.ts",
     "build": "ts-node -T scripts/build.ts",
     "__test": "node scripts/test.js",
     "test": "ts-node -T scripts/test.ts",

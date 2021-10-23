@@ -1,10 +1,10 @@
 import type { TProduct, TProductFiltersState } from 'types/app';
-import { HttpMethod, ProductCondition } from '@react-and-express/enums';
+import { HttpMethod, ProductCondition } from '@package/enums';
 import { info, error } from 'modules/logger';
 import * as fetch from 'modules/fetch';
 
 export const fetchData = async (method: HttpMethod, type: string): Promise<TProduct[]> => {
-  let doFetch = async (url: string) => {
+  const doFetch = async (url: string) => {
     info(`Fetching data from: ${url}`);
 
     if (method === HttpMethod.GET) {
@@ -14,7 +14,7 @@ export const fetchData = async (method: HttpMethod, type: string): Promise<TProd
     } else {
       return [];
     }
-  }
+  };
 
   try {
     return await doFetch(`${process.env.REACT_APP_LOCAL_SERVER_URL}/data/${type}`);

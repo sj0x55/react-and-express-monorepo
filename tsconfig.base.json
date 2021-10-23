@@ -18,15 +18,7 @@
     "sourceMap": true,
     "baseUrl": ".",
     "rootDir": ".",
-    "paths": {
-      "@react-and-express/*": [
-        "packages/configs/*/src",
-        "packages/tools/*/src",
-        "packages/libs/*/src",
-        "packages/ui-components/*/src",
-        "packages/*"
-      ]
-    },
+    "paths": {},
     "jsx": "react-jsx",
     "lib": ["dom", "dom.iterable", "esnext"],
     "typeRoots": ["node_modules/@types", "packages/types"]

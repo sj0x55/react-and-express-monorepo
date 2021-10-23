@@ -1,5 +1,5 @@
 {
-  "name": "@react-and-express/product-data-parser",
+  "name": "@package/product-data-parser",
   "version": "0.1.0",
   "private": true,
   "main": "src/index.ts",

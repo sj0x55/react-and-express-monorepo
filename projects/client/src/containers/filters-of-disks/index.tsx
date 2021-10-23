@@ -1,5 +1,5 @@
 import { get } from 'lodash';
-import { ProductType } from '@react-and-express/enums';
+import { ProductType } from '@package/enums';
 import { useDispatch, useSelector } from 'app/hooks';
 import { actions } from 'app/slice';
 import { selectProductFilters } from 'app/selectors';

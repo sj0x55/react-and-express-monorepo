@@ -1,5 +1,5 @@
 {
-  "name": "@react-and-express/server",
+  "name": "@project/server",
   "version": "0.1.0",
   "private": true,
   "imports": {
@@ -28,7 +28,6 @@
     "@types/ip": "^1.1.0",
     "@types/node": "^16.11.0",
     "@types/nodemailer": "^6.4.4",
-    "nodemon": "^2.0.13",
-    "tsconfig-paths": "^3.11.0"
+    "nodemon": "^2.0.13"
   }
 }

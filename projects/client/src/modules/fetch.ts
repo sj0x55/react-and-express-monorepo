@@ -1,4 +1,4 @@
-import { HttpMethod } from "@react-and-express/enums";
+import { HttpMethod } from '@package/enums';
 
 const timeoutOfPromise = <T>(ms: number, promise: Promise<T>): Promise<T> => {
   return new Promise(function (resolve, reject) {

@@ -2,9 +2,6 @@
   "extends": "../tsconfig.shared.json",
   "compilerOptions": {
     "baseUrl": "src",
-    "outDir": ".",
-    "paths": {
-      "*": ["*"]
-    }
+    "outDir": "build"
   }
 }

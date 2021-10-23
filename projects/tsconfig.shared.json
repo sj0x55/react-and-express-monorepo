@@ -1,3 +1,15 @@
 {
-  "extends": "../tsconfig.base.json"
+  "extends": "../tsconfig.base.json",
+  "compilerOptions": {
+    "rootDir": "..",
+    "paths": {
+      "*": ["*"],
+      "@package/*": [
+        "../../../packages/configs/*/src",
+        "../../../packages/libs/*/src",
+        "../../../packages/tools/*/src",
+        "../../../packages/ui-components/*/src"
+      ]
+    }
+  }
 }

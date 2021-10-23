@@ -3,7 +3,7 @@ import http, { RequestListener } from 'http';
 import { CorsOptions } from 'cors';
 import kill from 'kill-port';
 import { NextFunction, Request, Response } from 'express';
-import { HttpMethod, NodeEnv } from '@react-and-express/enums';
+import { HttpMethod, NodeEnv } from '@package/enums';
 
 export async function killPort(port: number) {
   if (process.env.NODE_ENV === NodeEnv.DEV) {

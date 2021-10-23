@@ -1,4 +1,4 @@
-import { TObject } from '@react-and-express/types';
+import { TObject } from '@package/types';
 import { join, isString } from 'lodash';
 
 export function prepareValue(value: unknown, { prefix, suffix }: TObject = {}): string {

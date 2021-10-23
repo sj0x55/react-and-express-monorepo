@@ -3,7 +3,7 @@ import { Redirect, Route, Switch } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyle } from 'styles/global';
 import { mainTheme, invertedTheme } from 'styles/theme';
-import { ProductType } from '@react-and-express/enums';
+import { ProductType } from '@package/enums';
 import { RootLayoutContainer } from 'components/layouts/root';
 import { Navigation } from 'containers/navigation';
 import { Disks } from 'views/Disks';
