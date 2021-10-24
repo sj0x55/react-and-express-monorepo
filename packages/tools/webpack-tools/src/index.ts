@@ -7,7 +7,7 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 import webpackHotMiddleware from 'webpack-hot-middleware';
 import dotenv from '@package/dotenv';
 import babelConfig from '@package/babel-config';
-import { getStandardPackagePaths, getStandardPackageFiles, getExistingPath } from '@package/monorepo-tools';
+import { getStandardPackagePaths, getStandardPackageFiles } from '@package/monorepo-tools';
 
 const standardPackagePaths = getStandardPackagePaths(process.cwd());
 const standardPackageFiles = getStandardPackageFiles(process.cwd());
@@ -62,14 +62,14 @@ const getCompiler = (customConfig: webpack.Configuration = {}) => {
           },
         ],
       },
-      devServer: {
-        static: relativePublicPath,
-        historyApiFallback: true,
-        compress: true,
-        port: 1234,
-        open: true,
-        hot: true,
-      },
+      // devServer: {
+      //   static: relativePublicPath,
+      //   historyApiFallback: true,
+      //   compress: true,
+      //   port: 1234,
+      //   open: true,
+      //   hot: true,
+      // },
       plugins: [
         new webpack.HotModuleReplacementPlugin(),
         new HtmlWebpackPlugin({

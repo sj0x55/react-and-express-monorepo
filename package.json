@@ -2,6 +2,13 @@
   "name": "react-and-express-monorepo",
   "version": "0.1.0",
   "private": true,
+  "workspaces": [
+    "projects/*",
+    "packages/configs/*",
+    "packages/libs/*",
+    "packages/tools/*",
+    "packages/ui-components/*"
+  ],
   "scripts": {
     "__type-check": "tsc -w --project tsconfig.json",
     "__packages:build": "tsc --build --force ./tsconfig.packages.json",

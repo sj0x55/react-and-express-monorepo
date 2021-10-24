@@ -18,12 +18,11 @@
     "sourceMap": true,
     "baseUrl": ".",
     "rootDir": ".",
-    "paths": {},
     "jsx": "react-jsx",
     "lib": ["dom", "dom.iterable", "esnext"],
     "typeRoots": ["node_modules/@types", "packages/types"]
   },
-  "include": ["packages/**/src", "projects/**/src"],
+  "include": ["packages/**/**/*", "packages/**/*", "projects/**/*"],
   "exclude": [
     "node_modules",
     "dist",

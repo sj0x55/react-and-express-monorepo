@@ -1,14 +1,4 @@
 {
-  "include": ["packages/**/*", "projects/**/*"],
-  "exclude": [
-    "node_modules",
-    "dist",
-    "build",
-    "**/*.test.*",
-    "**/*.spec.*",
-    "**/*.stories.*",
-    "**/*.d.*"
-  ],
   "references": [
     { "path": "./packages/libs/enums" },
     { "path": "./packages/libs/logger" },

@@ -4,13 +4,14 @@
     "composite": true,
     "rootDir": "..",
     "paths": {
-      "*": ["*"],
       "@package/*": [
         "../../../../packages/configs/*/src",
         "../../../../packages/libs/*/src",
         "../../../../packages/tools/*/src",
-        "../../../../packages/ui-components/*/src"
-      ]
+        "../../../../packages/ui-components/*/src",
+        "../../../../packages/*"
+      ],
+      "*": ["*"]
     }
   }
 }
