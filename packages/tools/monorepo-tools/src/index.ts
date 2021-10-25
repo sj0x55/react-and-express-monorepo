@@ -4,13 +4,13 @@ import path from 'path';
 export const resolveExistsPath = (baseDir: string | null, paths: string | string[]) => {
   try {
     if (baseDir) {
-      const baseRealPath = fs.realpathSync(baseDir);
+      const getRelativePath = getExistingPath(baseDir);
 
       return (
         [paths || []]
           .flat()
-          .map((relativePath) => path.resolve(baseRealPath, relativePath))
-          .find((resolvedPath) => fs.existsSync(resolvedPath)) || null
+          .map((relativePath) => getRelativePath(relativePath))
+          .find(Boolean) || null
       );
     }
   } catch (err) {
@@ -44,7 +44,7 @@ export const getStandardPackageFiles = (baseDir: string | null = null) => {
   return { indexFilePath, dotenvFilePath };
 };
 
-export const getPath = (baseDir: string) => (relativePath: string) => path.join(baseDir, relativePath);
+export const getPath = (baseDir: string) => (relativePath: string) => path.resolve(baseDir, relativePath);
 export const getExistingPath = (baseDir: string) => (relativePath: string) => {
   const existingPath = getPath(baseDir)(relativePath);
 

@@ -4,11 +4,6 @@
   "private": true,
   "main": "src/index.ts",
   "types": "types/index.d.ts",
-  "scripts": {
-    "test": "ts-node scripts/test.ts",
-    "tsc-config": "tsc --showConfig",
-    "tsc-check": "tsc"
-  },
   "devDependencies": {
     "@types/jest": "^27.0.2",
     "babel-jest": "^27.3.1",

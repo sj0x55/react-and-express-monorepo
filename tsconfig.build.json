@@ -6,8 +6,7 @@
     "build",
     "**/*.test.*",
     "**/*.spec.*",
-    "**/*.stories.*",
-    "**/*.d.*"
+    "**/*.stories.*"
   ],
   "references": [
     { "path": "./packages/libs/enums" },

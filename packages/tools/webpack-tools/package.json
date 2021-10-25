@@ -4,10 +4,6 @@
   "private": true,
   "main": "src/index.ts",
   "types": "types/index.d.ts",
-  "scripts": {
-    "build": "ts-node src/index.ts",
-    "tsc-check": "tsc"
-  },
   "devDependencies": {
     "@types/express": "^4.17.13",
     "@types/webpack": "^5.28.0",

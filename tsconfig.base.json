@@ -22,15 +22,16 @@
     "lib": ["dom", "dom.iterable", "esnext"],
     "typeRoots": ["node_modules/@types", "packages/types"]
   },
-  "include": ["packages/**/**/*", "packages/**/*", "projects/**/*"],
+  "include": ["packages/**/*", "projects/**/*"],
   "exclude": [
-    "node_modules",
-    "dist",
-    "build",
+    ".git",
+    ".history",
+    "**/node_modules/*",
+    "**/dist/*",
+    "**/build/*",
     "**/*.test.*",
     "**/*.spec.*",
-    "**/*.stories.*",
-    "**/*.d.*"
+    "**/*.stories.*"
   ],
   "ts-node": {
     "require": ["tsconfig-paths/register"],

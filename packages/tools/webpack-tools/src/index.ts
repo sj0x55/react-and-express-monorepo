@@ -13,7 +13,7 @@ const standardPackagePaths = getStandardPackagePaths(process.cwd());
 const standardPackageFiles = getStandardPackageFiles(process.cwd());
 const paths = { ...standardPackagePaths, ...standardPackageFiles };
 const indexHtmlFileName = 'index.html';
-const relativePublicPath = '/public';
+const relativePublicPath = '/';
 const templateFilePath = path.join(paths.publicPath || '', indexHtmlFileName);
 const indexFilePath = path.join(paths.outputPath || '', indexHtmlFileName);
 
@@ -89,7 +89,7 @@ const getCompiler = (customConfig: webpack.Configuration = {}) => {
   );
   return webpack(
     merge(webpackConfig, {
-      plugins: [new webpack.EnvironmentPlugin({ NODE_ENV: webpackConfig.mode, ...process.env })],
+      plugins: [new webpack.EnvironmentPlugin({ ...process.env, NODE_ENV: webpackConfig.mode })],
     }),
   );
 };

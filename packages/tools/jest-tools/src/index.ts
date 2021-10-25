@@ -1,16 +1,19 @@
-import { getStandardPackagePaths, getExistingPath } from '@package/monorepo-tools';
-import setupTests from 'setup-tests';
 import * as jest from 'jest';
-
-process.env.BABEL_ENV = 'test';
-process.env.NODE_ENV = 'test';
+import dotenv from '@package/dotenv';
+import { getStandardPackagePaths, getStandardPackageFiles, getExistingPath } from '@package/monorepo-tools';
 
 const standardPackagePaths = getStandardPackagePaths(process.cwd());
+const standardPackageFiles = getStandardPackageFiles(process.cwd());
+const paths = { ...standardPackagePaths, ...standardPackageFiles };
 const getRelativePath = getExistingPath(process.cwd());
 const getLocalPath = getExistingPath(__dirname);
 const customJestConfig = getRelativePath('jest.config.js');
 
 export default async () => {
+  if (paths.dotenvFilePath) {
+    dotenv(paths.dotenvFilePath);
+  }
+
   const { default: defaultFileConfig, ...fileConfig } = customJestConfig
     ? await import(customJestConfig)
     : { default: {} };
@@ -23,10 +26,9 @@ export default async () => {
         roots: ['<rootDir>/src'],
         testEnvironment: 'jsdom',
         testRunner: 'jest-circus/runner',
-        modulePaths: [standardPackagePaths.srcPath],
+        modulePaths: [paths.srcPath],
         setupFiles: [getLocalPath('setup-tests.ts')],
         setupFilesAfterEnv: [getLocalPath('setup-tests-after.ts')],
-        watchPlugins: ['jest-watch-typeahead/filename', 'jest-watch-typeahead/testname'],
         transform: {
           '^.+\\.(js|jsx|ts|tsx)$': getLocalPath('config/transform/babel.ts'),
           '^.+\\.css$': getLocalPath('config/transform/css.ts'),

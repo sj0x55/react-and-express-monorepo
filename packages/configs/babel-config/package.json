@@ -5,8 +5,7 @@
   "main": "src/index.ts",
   "types": "types/index.d.ts",
   "scripts": {
-    "build": "tsc --build --force",
-    "tsc-config": "tsc --showConfig"
+    "build": "tsc --build --force"
   },
   "dependencies": {
     "@babel/runtime": "^7.15.4"

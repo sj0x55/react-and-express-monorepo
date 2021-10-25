@@ -11,7 +11,7 @@ import { homeController } from './controllers/home';
   try {
     dotenv.config();
 
-    const PORT: string = parseInt(<string>process.env.PORT, 10) || 3005;
+    const PORT: number = parseInt(<string>process.env.PORT, 10) || 3005;
     const ipAddress = ip.address();
     const app = express();
     const corsConfig = getCorsConfig(ipAddress);
@@ -21,6 +21,7 @@ import { homeController } from './controllers/home';
     app.use(cors(corsConfig));
     app.use(express.json());
     app.use(express.urlencoded({ extended: true }));
+    app.use('/static', express.static('public'));
 
     app.get('/', runAsyncWrapper(homeController));
     app.get('/data/:name', runAsyncWrapper(getDataController));

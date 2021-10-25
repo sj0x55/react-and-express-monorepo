@@ -25,14 +25,9 @@
     "react-test-renderer": "^17.0.2"
   },
   "scripts": {
-    "__start": "node scripts/start.js",
     "start": "ts-node --type-check=false scripts/start.ts",
-    "client:build": "ts-node --type-check=false scripts/build.ts",
-    "build": "ts-node -T scripts/build.ts",
-    "__test": "node scripts/test.js",
-    "test": "ts-node -T scripts/test.ts",
-    "tsc-config": "tsc --showConfig",
-    "tsc": "tsc"
+    "build": "ts-node --type-check=false scripts/build.ts",
+    "test": "ts-node --type-check=false scripts/test.ts"
   },
   "browserslist": {
     "production": [
