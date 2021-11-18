@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+import glob from 'glob';
 
 export const resolveExistsPath = (baseDir: string | null, paths: string | string[]) => {
   try {
@@ -57,4 +58,52 @@ export const checkExistingPaths = (paths: Record<string, string | null>) => {
   });
 
   return paths;
+};
+
+function loadJsonFileSync(filePath: string) {
+  const data = new TextDecoder().decode(fs.readFileSync(filePath));
+
+  return JSON.parse(data);
+}
+
+const findPackages = (packageSpecs: string[], rootDir: string) =>
+  packageSpecs.reduce((pkgDirs: string[], pkgGlob: string) => {
+    const packages = glob.hasMagic(pkgGlob)
+      ? glob
+          .sync(pkgGlob, {
+            cwd: rootDir,
+            // absolute: true,
+          })
+          .filter((item) => fs.lstatSync(item).isDirectory())
+      : [path.join(rootDir, pkgGlob)];
+
+    return [...pkgDirs, ...packages];
+  }, []);
+
+export const getPackages = (rootDir: string) => {
+  const lernaJsonPath = path.join(rootDir, 'lerna.json');
+  const pkgJsonPath = path.join(rootDir, 'package.json');
+
+  if (fs.existsSync(lernaJsonPath)) {
+    const lernaJson = loadJsonFileSync(lernaJsonPath);
+
+    if (!lernaJson.useWorkspaces) {
+      return findPackages(lernaJson.packages, rootDir);
+    }
+  }
+
+  if (fs.existsSync(pkgJsonPath)) {
+    const pkgJson = loadJsonFileSync(pkgJsonPath);
+    const workspaces = pkgJson.workspaces;
+
+    if (workspaces) {
+      if (Array.isArray(workspaces)) {
+        return findPackages(workspaces, rootDir);
+      } else if (Array.isArray(workspaces.packages)) {
+        return findPackages(workspaces.packages, rootDir);
+      }
+    }
+  }
+
+  return [];
 };

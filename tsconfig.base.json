@@ -22,7 +22,7 @@
     "lib": ["dom", "dom.iterable", "esnext"],
     "typeRoots": ["node_modules/@types", "packages/types"]
   },
-  "include": ["packages/**/*", "projects/**/*"],
+  "include": ["packages/**/*", "projects/**/*", "scripts/**/*"],
   "exclude": [
     ".git",
     ".history",

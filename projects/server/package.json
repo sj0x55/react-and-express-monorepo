@@ -6,8 +6,7 @@
     "libs/*": "./build/libs/*"
   },
   "scripts": {
-    "start": "nodemon --config nodemon.json",
-    "build": "babel src --out-dir build --extensions \".ts,.tsx\" --source-maps inline"
+    "start": "nodemon --config nodemon.json"
   },
   "dependencies": {
     "@godaddy/terminus": "^4.9.0",

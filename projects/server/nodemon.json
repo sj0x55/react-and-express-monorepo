@@ -1,6 +1,6 @@
 {
   "watch": ["./src", "../../packages/*/build"],
-  "ignore": ["**/*.d.ts", "**/*.test.ts"],
+  "ignore": ["**/*.d.ts", "**/*.test.ts", "**/*.stories.ts"],
   "ext": "js,jsx,ts,tsx,json",
   "__exec": "npm run build && node build/index.js",
   "exec": "ts-node --project tsconfig.json --files src/index.ts",

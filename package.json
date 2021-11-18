@@ -12,8 +12,11 @@
   "scripts": {
     "lerna": "lerna",
     "build": "lerna run build",
-    "test": "lerna run test",
-    "lint": "eslint --ext js,ts,tsx ."
+    "__test": "lerna run test",
+    "test": "ts-node --project ./scripts/tsconfig.json --type-check=false ./scripts/test.ts",
+    "lint": "eslint --ext js,ts,tsx .",
+    "client": "npm start -w @project/client",
+    "server": "npm start -w @project/server"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.0.0",
