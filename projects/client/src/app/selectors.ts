@@ -1,5 +1,5 @@
 import type { RootState } from 'types/store';
-import { ProductType } from '@react-and-express/enums';
+import { ProductType } from '@package/enums';
 import { get } from 'lodash';
 import { StateStatus } from './enums';
 

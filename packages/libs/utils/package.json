@@ -1,0 +1,7 @@
+{
+  "name": "@package/utils",
+  "version": "0.1.0",
+  "private": true,
+  "main": "src/index.ts",
+  "types": "types/index.d.ts"
+}

@@ -1,0 +1,14 @@
+{
+  "name": "@package/monorepo-tools",
+  "version": "0.1.0",
+  "private": true,
+  "main": "src/index.ts",
+  "types": "types/index.d.ts",
+  "devDependencies": {
+    "@types/glob": "^7.2.0",
+    "@types/globby": "^9.1.0",
+    "fast-glob": "^3.2.7",
+    "glob": "^7.2.0",
+    "globby": "^12.0.2"
+  }
+}

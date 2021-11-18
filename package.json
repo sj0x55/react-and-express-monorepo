@@ -3,24 +3,46 @@
   "version": "0.1.0",
   "private": true,
   "workspaces": [
-    "packages/*",
-    "projects/*"
+    "projects/*",
+    "packages/configs/*",
+    "packages/libs/*",
+    "packages/tools/*",
+    "packages/ui-components/*"
   ],
   "scripts": {
-    "packages:build": "tsc --build --force ./tsconfig.packages.json",
-    "client:start": "npm run packages:build && npm start -w @react-and-express/client",
-    "server:start": "npm run packages:build && npm start -w @react-and-express/server",
-    "client:type-check": "npm run type-check -w @react-and-express/client",
-    "server:type-check": "npm run type-check -w @react-and-express/server"
-  },
-  "dependencies": {
-    "date-fns": "^2.25.0",
-    "lodash": "^4.17.21"
+    "lerna": "lerna",
+    "build": "lerna run build",
+    "__test": "lerna run test",
+    "test": "ts-node --project ./scripts/tsconfig.json --type-check=false ./scripts/test.ts",
+    "lint": "eslint --ext js,ts,tsx .",
+    "client": "npm start -w @project/client",
+    "server": "npm start -w @project/server"
   },
   "devDependencies": {
-    "@types/date-fns": "^2.6.0",
-    "@types/lodash": "^4.14.175",
-    "jest-date-mock": "^1.0.8",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-jest": "^25.2.2",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.26.1",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "lerna": "^4.0.0",
+    "prettier": "^2.4.1",
+    "ts-node": "^10.3.1",
+    "tsconfig-paths": "^3.11.0",
     "typescript": "^4.4.4"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

@@ -1,0 +1,24 @@
+{
+  "include": ["packages/**/*", "projects/**/*"],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "build",
+    "**/*.test.*",
+    "**/*.spec.*",
+    "**/*.stories.*"
+  ],
+  "references": [
+    { "path": "./packages/libs/enums" },
+    { "path": "./packages/libs/logger" },
+    { "path": "./packages/libs/mailer" },
+    { "path": "./packages/libs/money" },
+    { "path": "./packages/libs/product-data-io" },
+    { "path": "./packages/libs/product-data-parser" },
+    { "path": "./packages/libs/utils" },
+    { "path": "./packages/tools/webpack-tools" },
+    { "path": "./packages/tools/jest-tools" },
+    { "path": "./packages/tools/monorepo-tools" },
+    { "path": "./packages/configs/babel-config" }
+  ]
+}

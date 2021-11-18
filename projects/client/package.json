@@ -1,45 +1,33 @@
 {
-  "name": "@react-and-express/client",
+  "name": "@project/client",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.6.2",
+    "date-fns": "^2.25.0",
+    "lodash": "^4.17.21",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-redux": "^7.2.5",
     "react-router-dom": "^5.3.0",
-    "react-scripts": "^4.0.3",
     "styled-components": "^5.3.1"
   },
   "devDependencies": {
-    "@storybook/addon-actions": "^6.3.12",
-    "@storybook/addon-docs": "^6.3.12",
-    "@storybook/addon-essentials": "^6.3.12",
-    "@storybook/addon-links": "^6.3.12",
-    "@storybook/node-logger": "^6.3.12",
-    "@storybook/preset-create-react-app": "^3.2.0",
-    "@storybook/react": "^6.3.12",
     "@testing-library/jest-dom": "^5.14.1",
-    "@testing-library/react": "^11.2.7",
+    "@testing-library/react": "^12.1.2",
     "@testing-library/react-hooks": "^7.0.2",
-    "@testing-library/user-event": "^12.8.3",
+    "@testing-library/user-event": "^13.5.0",
     "@types/react": "^17.0.30",
     "@types/react-dom": "^17.0.9",
     "@types/react-redux": "^7.1.19",
     "@types/react-router-dom": "^5.3.1",
-    "@types/styled-components": "^5.1.15"
+    "@types/styled-components": "^5.1.15",
+    "react-test-renderer": "^17.0.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "start": "ts-node --type-check=false scripts/start.ts",
+    "build": "ts-node --type-check=false scripts/build.ts",
+    "test": "ts-node --type-check=false scripts/test.ts"
   },
   "browserslist": {
     "production": [

@@ -1,0 +1,11 @@
+{
+  "name": "@package/enums",
+  "version": "0.1.0",
+  "private": true,
+  "main": "src/index.ts",
+  "types": "types/index.d.ts",
+  "scripts": {
+    "build": "tsc --build --force",
+    "tsc-config": "tsc --showConfig"
+  }
+}

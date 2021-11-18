@@ -1,0 +1,11 @@
+{
+  "packages": [
+    "packages/configs/*",
+    "packages/libs/*",
+    "packages/tools/*",
+    "packages/ui-components/*",
+    "projects/*"
+  ],
+  "useWorkspaces": true,
+  "version": "0.0.0"
+}

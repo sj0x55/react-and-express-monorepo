@@ -1,7 +1,17 @@
 {
   "extends": "../tsconfig.base.json",
   "compilerOptions": {
-    "noEmit": false,
-    "composite": true
-  },
+    "composite": true,
+    "rootDir": "..",
+    "paths": {
+      "@package/*": [
+        "../../../../packages/configs/*/src",
+        "../../../../packages/libs/*/src",
+        "../../../../packages/tools/*/src",
+        "../../../../packages/ui-components/*/src",
+        "../../../../packages/*"
+      ],
+      "*": ["*"]
+    }
+  }
 }

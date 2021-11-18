@@ -1,6 +1,6 @@
 import type { TAppState } from 'types/slice';
 import type { TProduct } from 'types/app';
-import { ProductType } from '@react-and-express/enums';
+import { ProductType } from '@package/enums';
 import { set } from 'lodash';
 import { PayloadAction } from '@reduxjs/toolkit';
 

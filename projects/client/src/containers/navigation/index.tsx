@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { ProductType } from '@react-and-express/enums';
+import { ProductType } from '@package/enums';
 import { StyledLink } from 'components/StyledLink';
 
 export const Wrapper = styled.nav`
